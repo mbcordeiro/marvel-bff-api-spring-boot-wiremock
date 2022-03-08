@@ -1,0 +1,16 @@
+logging:
+  path: '@logs.path@'
+
+ts: '1'
+apiKey:
+hash:
+marvelPublicAPIV1:
+  name: marvelPublicAPIV1
+  url: http://gateway.marvel.com/v1/public
+
+proxy:
+  port: ''
+  enabled: 'false'
+  host: ''
+
+directory: marvel
