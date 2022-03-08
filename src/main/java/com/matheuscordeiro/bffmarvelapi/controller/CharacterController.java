@@ -1,7 +1,7 @@
 package com.matheuscordeiro.bffmarvelapi.controller;
 
 import com.matheuscordeiro.bffmarvelapi.dto.MarvelCharacter;
-import com.matheuscordeiro.bffmarvelapi.service.ports.BffService;
+import com.matheuscordeiro.bffmarvelapi.service.ports.CharacterService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +15,8 @@ import java.util.List;
 @RestController
 @RequestMapping("/")
 @RequiredArgsConstructor
-public class BffController {
-    private final BffService bffService;
+public class CharacterController {
+    private final CharacterService bffService;
 
     @GetMapping(value = "/marvel/heros/{name}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<MarvelCharacter>> findCharacters(@PathVariable("name") String name) {
